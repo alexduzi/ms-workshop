@@ -37,6 +37,15 @@ public class WorkerResource {
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Worker> findById(@PathVariable Long id) {
+		// apenas comentado para deixar registrado que foi testado o comportamento do hystrix
+		/*
+		try {
+			Thread.sleep(3000L);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		
 		logger.info("PORT = " + env.getProperty("local.server.port"));
 		
 		Worker worker = repository.findById(id).get();
