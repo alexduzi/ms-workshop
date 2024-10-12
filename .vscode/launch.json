@@ -19,6 +19,16 @@
             "projectName": "hr-user",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HrApiGatewayZuulApplication<hr-api-gateway-zuul>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.alexduzi.hrapigatewayzuul.HrApiGatewayZuulApplication",
+            "projectName": "hr-api-gateway-zuul",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
