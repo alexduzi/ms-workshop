@@ -2,13 +2,21 @@
     "configurations": [
         {
             "type": "java",
+            "name": "HrOauthApplication",
+            "request": "launch",
+            "mainClass": "com.alexduzi.hroauth.HrOauthApplication",
+            "projectName": "hr-oauth"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-HrEurekaServerApplication<hr-eureka-server>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.alexduzi.hreurekaserver.HrEurekaServerApplication",
             "projectName": "hr-eureka-server",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=58440 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=hr-eureka-server"
         },
         {
             "type": "java",
@@ -18,7 +26,8 @@
             "mainClass": "com.alexduzi.hruser.HrUserApplication",
             "projectName": "hr-user",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=55868 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=hr-user"
         },
         {
             "type": "java",
@@ -27,6 +36,17 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.alexduzi.hrapigatewayzuul.HrApiGatewayZuulApplication",
             "projectName": "hr-api-gateway-zuul",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=59110 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=hr-api-gateway-zuul"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HrPayrollApplication<hr-payroll>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.alexduzi.hrpayroll.HrPayrollApplication",
+            "projectName": "hr-payroll",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
