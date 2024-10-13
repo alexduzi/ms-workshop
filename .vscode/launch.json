@@ -5,7 +5,8 @@
             "name": "HrOauthApplication",
             "request": "launch",
             "mainClass": "com.alexduzi.hroauth.HrOauthApplication",
-            "projectName": "hr-oauth"
+            "projectName": "hr-oauth",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=50549 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=hr-oauth"
         },
         {
             "type": "java",
@@ -47,6 +48,27 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.alexduzi.hrpayroll.HrPayrollApplication",
             "projectName": "hr-payroll",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=50652 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=hr-payroll"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HrConfigServerApplication<hr-config-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.alexduzi.hrconfigserver.HrConfigServerApplication",
+            "projectName": "hr-config-server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HrWorkerApplication<hr-worker>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.alexduzi.hrworker.HrWorkerApplication",
+            "projectName": "hr-worker",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
