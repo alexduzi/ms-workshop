@@ -3,7 +3,7 @@ package com.alexduzi.hreurekaserver;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+@SpringBootTest()
 class HrEurekaServerApplicationTests {
 
 	@Test
